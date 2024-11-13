@@ -3,13 +3,12 @@ on:
   workflow_dispatch:
   push:
   schedule:
-    - cron:  '0 12 * * *'
-  watch:
-    types: [started]
+    - cron:  '0 0 * * *'
+    
 jobs:
   merge:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
+    
     steps:
       - uses: actions/checkout@v2.3.5
       - name: Merge upstream
