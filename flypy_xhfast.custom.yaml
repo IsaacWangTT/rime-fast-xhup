@@ -103,11 +103,11 @@ patch:
       calculator: "^(/=|cC)(.*)$"               # 简易计算器
       switch_options: "^(/so|sO)$"              # 切换配置选项
       flypy_key_help: "^/ok[a-z]*$"             # 双拼键位帮助
-      shortcuts: "^/(fj|kj)[a-z]*$"             # 快捷指令(短语)
+      shortcuts: "^/(jk|kj)[a-z]*$"             # 快捷指令(短语)
       easy_en: "(/oe|eN)[a-zA-Z*]+'?$"          # 英文方案(带中文)
       radical_lookup: "^(~|rL)[a-z]+'?$"        # 单字部件拆字组字
       chinese_lunar:  "^(/nl|nL)[0-9]*$"        # 中国农历(可反查)
-      chinese_number: "^(/cn|Nn)[0-9.]+$"       # 中文大写数字(金额)
+      chinese_number: "^(/nn|nN)[0-9.]+$"       # 中文大写数字(金额)
 
   punctuator/+:
     symbols/+:
@@ -178,8 +178,8 @@ patch:
 
   history:                            # 上屏历史记录
     tag: history
-    # prefix: "hH"
-    prefix: "/hs"
+    # prefix: "/hs"
+    prefix: "hH"
     tips: "上屏历史"
     max_count: 99
     initial_quality: 999
@@ -188,28 +188,28 @@ patch:
 
   calculator:                         # 简易计算器
     tag: calculator
-    # prefix: "cC"
-    prefix: "/="
+    # prefix: "/="
+    prefix: "cC"
     tips: "计算器"
 
   chinese_number:                     # 中文大写数字(金额)
-    # prefix: "Nn"
-    prefix: "/cn"
+    # prefix: "/nn"
+    prefix: "Nn"
     suffix: "'"
     tips: "中文数字"
     tag: chinese_number
-    select_keys: "HJKLNM"
+    select_keys: "HJKLIOM"
 
   easy_en/+:                          # 英文单词输入方案
-    # prefix: "eN"
-    prefix: "/oe"
+    # prefix: "/oe"
+    prefix: "eN"
     tips: "英文"
     wildcard: '*'
     expan_word_count: 666             # 模糊匹配最多迭代数
 
   radical_lookup/+:                   # 单字部件拆字组字
-    # prefix: "rL"
-    prefix: "~"
+    # prefix: "~"
+    prefix: "rL"
     tips: 部件组字
 
   radical_reverse_lookup/+:           # 部件组字反查拼音
