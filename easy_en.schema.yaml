@@ -6,7 +6,7 @@
 schema:
   schema_id: easy_en
   name: Easy English
-  version: "2024.05.09"
+  version: 2025.01.11
   author:
     - Patrick <ipatrickmac@gmail.com>
     - BlindingDark <blindingdark@outlook.com>
@@ -16,7 +16,7 @@ schema:
 
 engine:
   processors:
-    # - lua_processor@*engword_append_space
+    # - lua_processor@*en-word_append_space
     - lua_processor@*flypy_switcher*processor
     - ascii_composer
     - key_binder
